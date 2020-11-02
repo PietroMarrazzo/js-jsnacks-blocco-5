@@ -20,9 +20,13 @@ $(document).ready(function(){
         }
     ];
 
+    // handlebars script
+    var source = $('#fish-template').html();
+    var template = Handlebars.compile(source);
+
     var pesceLeggero = pesci[0];
 
-    for (i = 1; i < pesci.length; i++) {
+    for (var i = 1; i < pesci.length; i++) {
 
         if ( pesceLeggero.peso > pesci[i].peso) {
             pesceLeggero = pesci[i];
@@ -30,18 +34,14 @@ $(document).ready(function(){
     }
     // console.log(pesceLeggero);
 
-    // handlebars script
-    var source = $('#fish-template').html;
-
-    var template = Handlebars.compile(source);
+    
 
     // stampa a schermo
-    var data = [
+    var data =
         {
         nome: pesceLeggero.nome,
         peso: pesceLeggero.peso,
-    }
-    ]
+    };
 
     // compilazione
     var html = template(data);
