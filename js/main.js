@@ -53,6 +53,27 @@ $(document).ready(function(){
 
 
     // SNACK 2
+    // array nomi
+    var listaNomi = ['Gino', 'Pietro', 'Lulu', 'Laura', 'France', 'Pasqua'];
+
+    // valore massimo inseribile dall'utente 
+    limit = listaNomi.length - 1;
+
+    // richiesta valori min e max 
+    var min = parseInt(prompt('Inserisci valore minimo, tra 0 e ' + limit).trim());
+    var max = parseInt(prompt('Inserisci valore massimo, tra ' + min + ' e ' + limit).trim());
+
+
+    var newListaNomi = [];
+    
+    // ciclo per individuare i nomi tra i valori inseriti
+    for (var i = min; i <= max; i++) {
+
+        newListaNomi.push(listaNomi[i]);
+
+    }
+
+    // console.log(newListaNomi);
 
 
 
