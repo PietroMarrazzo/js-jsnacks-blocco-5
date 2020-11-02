@@ -80,5 +80,41 @@ $(document).ready(function(){
 
 
 
+    // SNACK 3
+    var ppl = [ 
+        {
+            nome: 'Pietro',
+            anni: 28
+        },
+        {
+            nome: 'Lulu',
+            anni: 21
+        },
+        {
+            nome: 'Pasqua',
+            anni: 60
+        },
+        {
+            nome: 'Laura',
+            anni: 60
+        }
+    ];
+    
+    // copio l'array ppl e aggiungo nuova proprietà agli oggetti interni, contenenti una lettera random
+    var newPpl = [];
+
+    for (var i = 0; i < ppl.length; i++) {
+        var copyPpl = {
+            nome: ppl[i].nome,
+            anni: ppl[i].anni,
+            taglia: 
+
+        }
+        newPpl[i].position = '';
+    }
+
+
+
+
 })// <-- fine ready
 
